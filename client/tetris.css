@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+body {
+    background-color: rgb(49, 204, 243);
+}
+
+.grid {
+    width: 200px;
+    height: 400px;
+    background-color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid;
+}
+
+.grid div {
+    height: 20px;
+    width: 20px;
+}
+
+.tetromino {
+    background-color: rgb(95, 95, 175);
+}
+
+.mini-grid {
+    margin-left: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color:rgb(185, 185, 180);
+    border: 2px solid;
+}
+
+.mini-grid div {
+    height: 20px;
+    width: 20px ;
+}   
+
+button:hover {
+	border-color: #f1ff5c;
+	color: white;
+	box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+	transform: translateY(-0.25em);
+}
+
+.footer {
+    font-family: cursive;
+    background-color: whitesmoke;
+    position: fixed;
+    bottom: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    justify-content: center;
+    text-align: center;
+}

@@ -1,0 +1,66 @@
+body {
+	font-family: 'Roboto Mono', monospace;
+	/* background: #1f1b29; */
+    background-color: rgb(238, 241, 234);
+    padding-top: 150px;
+}
+
+.navBar {
+    position: fixed;
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1 {
+    font-family: cursive;
+    color: black;
+}
+
+h2 {
+    font-family: cursive;
+    color: black;
+}
+/* Form Data */
+
+
+
+#jokes {
+    color: black;
+}
+
+button {
+	background: none;
+	color: blue;
+	border: 3px solid;
+	padding: 1em 2em;
+	font-style: 1em;
+	transition: all 0.2s;
+	border-radius: 3px;
+    margin: 3px;
+}
+
+button:hover {
+	border-color: skyblue;
+	color: black;
+	box-shadow: 0 0.5em 0.5em -0.4em rgb(69, 52, 155);
+	transform: translateY(-0.25em);
+}
+
+.footer {
+    font-family: cursive;
+    background-color: whitesmoke;
+    position: relative;
+    bottom: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    justify-content: center;
+    text-align: center;
+}
