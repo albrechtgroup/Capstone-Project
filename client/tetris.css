@@ -8,6 +8,10 @@ body {
     background-color: rgb(49, 204, 243);
 }
 
+#navbar {
+    align-items: center;
+}
+
 .grid {
     width: 200px;
     height: 400px;

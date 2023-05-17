@@ -42,7 +42,7 @@ const getDadJoke = async () => {
     
 }
 
-complimentBtn.addEventListener('click', getCompliment);
+// complimentBtn.addEventListener('click', getCompliment);
 fortuneBtn.addEventListener('click', getFortune);
 dadJokeButton.addEventListener('click', addNewJoke);
 

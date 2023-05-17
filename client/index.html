@@ -1,26 +1,30 @@
 <!DOCTYPE html>
+<html lang="en"></html>
 <html>
   <head>
-    <title>Back End Assessment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Capstone Project</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="navBar">
         <h1>I Found__.</h1>
         <h4>The WORLD Found!</h4>
-        <button id="loginBtn">Log In/Sign Up</button>
+        <!-- <button id="loginBtn">Log In/Sign Up</button> -->
         <hr>
     </div> 
         
     <form id="found" action="post">
         <h2>I found ___.</h2>
         <input type="text" placeholder="I found ___." name="found" id="found">
-        <button id="foundButton">I FOUND</button>
+        <button id="foundButton">SUBMIT</button>
         <br>
         <h2>I found Video.</h2>
-        <input type="text" placeholder="Post found video" name="foundVideo" id="foundVideo">
-        <button id="vidoeButton">FOUND VIDEO</button>
+        <input type="text" placeholder="Post Video" name="foundVideo" id="foundVideo">
+        <button id="vidoeButton">SUBMIT</button>
       </form>    
     <br>
     <form id="lost" action="post">
@@ -33,7 +37,7 @@
     <hr>
     <div class="comments">
         <h2>Leave Us a Comment</h2>
-
+        <!-- Change this 'action' -->
         <form action="/dogs" id="postForm">
             <input type="text" name="username" placeholder="username">
             <input type="text" name="comments" placeholder="comments">
@@ -41,31 +45,30 @@
         </form>
 
         <h2>Comments:</h2>
-          <ul id="comments">
-
-          </ul>
+          <ul id="comments"></ul>
     
     </div>
     <br>
     <hr>
     <div class="container">
         <h2>Don't feel Lost, These will cheer you up!</h2>
-        <button id="complimentButton">Get a Compliment</button>
+        <!-- <button id="complimentButton">Get a Compliment</button> -->
         <button id="fortuneButton">Get a Fortune</button>
-        <br>
         <button id="dadJokeButton">Get a Dad Joke</button>
           <ul id="jokes"></ul>
+          <div class="tetris"> 
+              <button>
+                <a href="./tetris.html">Play TETRIS</a>
+              </button>
+          </div> 
     </div>
 
     <footer class="footer">
         <h5>Copyright I Found__* 2023</h5>
-        <div class="tetris">
-          <button>
-            <a href="./tetris.html">Play TETRIS</a>
-          </button>
-        </div>
+        
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
     
