@@ -23,14 +23,6 @@ const getFortune = () => {
     });
 }
 
-const addNewJoke = async () => {
-    const jokeText = await getDadJoke();
-    console.log(jokeText)
-    const newLI = document.createElement('LI');
-    newLI.append(jokeText);
-    jokes.append(newLI);
-}
-
 const getDadJoke = async () => {
     try {
         const config = { headers: { Accept: 'application/json' }}
@@ -41,6 +33,17 @@ const getDadJoke = async () => {
     }
     
 }
+
+// addComments*
+
+const addNewJoke = async () => {
+    const jokeText = await getDadJoke();
+    console.log(jokeText)
+    const newLI = document.createElement('LI');
+    newLI.append(jokeText);
+    jokes.append(newLI);
+}
+
 
 // complimentBtn.addEventListener('click', getCompliment);
 fortuneBtn.addEventListener('click', getFortune);
