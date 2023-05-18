@@ -3,20 +3,16 @@
   <head>
     <meta charset="utf-8">
     <script src="tetris.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="tetris.css"></link>
     <title>Basic Tetris</title>
   </head>
   <body>
-
-    <div id="navBar">
-        <h1>TETRIS</h1>
-        <h3>Score:<span id="score">0</span></h3>
-        <button id="start-button">Start/Pause</button>
-    </div>
+    <h1 class="display-1">TETRIS</h1> 
     <hr>
     
-    <div class="container">
-
+    <h1>Score: <span id="score">0</span></h1>       
+    <div class="container flex justify-content-center">   
       <div class="grid">
         <div></div>
         <div></div>
@@ -229,7 +225,13 @@
         <div class="taken"></div>
         <div class="taken"></div>
       </div>
+      <hr>
 
+      <div>
+        <button id="start-button">Start / Pause</button> 
+      </div>
+      
+      <hr>
       <div class="mini-grid">
         <div></div>
         <div></div>
@@ -248,7 +250,16 @@
         <div></div>
         <div></div>
       </div>
- 
+       
+    </div>
+
+    <div class="container flex justify-content-center">
+        <ul>
+          <li>Left arrow < moves Tetrimone to the left</li>
+          <li>Right arrow > moves Tetrimone to the right</li>
+          <li>Down arrow moved the Tetrimone down the box quicker</li>
+          <li>Up arrow ^ rotates the Tetrimone</li>
+        </ul>
     </div>
 
   </body>

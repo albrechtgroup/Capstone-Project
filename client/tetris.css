@@ -1,15 +1,23 @@
+body {
+    font-family: OCR A Std, monospace;
+    background-color: rgb(49, 204, 243);
+}
+
+h1 {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.navbar {
+    width: 500px;
+    margin: 0;
+    justify-content: center;
+}
+
 .container {
     display: flex;
     margin: 40px auto;
     max-width: 600px;
-}
-
-body {
-    background-color: rgb(49, 204, 243);
-}
-
-#navbar {
-    align-items: center;
 }
 
 .grid {
@@ -50,6 +58,17 @@ button:hover {
 	color: white;
 	box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
 	transform: translateY(-0.25em);
+}
+
+button {
+	background: none;
+	color: blue;
+	border: 3px solid;
+	padding: 1em 2em;
+	font-style: 1em;
+	transition: all 0.2s;
+	border-radius: 23px;
+    margin: 3px;
 }
 
 .footer {
