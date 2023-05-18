@@ -1,3 +1,4 @@
+const submitButton = document.querySelector(".btn btn-primary");
 const complimentBtn = document.getElementById("complimentButton")
 const fortuneBtn = document.getElementById("fortuneButton");
 const dadJokeButton = document.querySelector('#dadJokeButton');
