@@ -10,7 +10,7 @@ body {
 .navbar {
     display: flex;
     position: fixed;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
 	border-bottom: 2px solid black;
     top: 0; /* Position the navbar at the top of the page */
@@ -21,10 +21,11 @@ body {
 }
 
 .form {
-    width: 200px;
-    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+   
 .container {
     position: relative;
     justify-content: space-evenly;
@@ -62,6 +63,7 @@ button {
 button:hover {
 	border-color: skyblue;
 	color: black;
+    font-weight: bold;
 	box-shadow: 0 0.5em 0.5em -0.4em rgb(69, 52, 155);
 	transform: translateY(-0.25em);
 }
