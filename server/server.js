@@ -10,7 +10,14 @@ app.use(express.json());
 const { getCompliment } = require('./controller')
 const { getFortune } = require('./controller')
 
-app.get("/api/compliment", getCompliment);
+// Form submision
+// app.post(`/api/movies`, createMovie);
+// app.put(`/api/movies/:id`, updateMovie);
+// app.delete(`/api/movies/:id`, deleteMovie);
+
+// .get from controller.js
 app.get("/api/fortune", getFortune);
+
+
 
 app.listen(4000, () => console.log("===> Server running on 4000 <==="));

@@ -1,20 +1,15 @@
+// Create *
 const submitButton = document.querySelector(".btn btn-primary");
-const complimentBtn = document.getElementById("complimentButton")
-const fortuneBtn = document.getElementById("fortuneButton");
+const loginBtn = document.getElementById("loginBtn");
+
+const fortuneBtn = document.querySelector("#fortuneButton");
 const dadJokeButton = document.querySelector('#dadJokeButton');
-// const tetrisBtn = document.querySelector('#tetrisButton')
-const loginBtn = document.getElementById("loginBtn")
 const jokes = document.querySelector('#jokes');
 
-const getCompliment = () => {
-    axios.get("http://localhost:4000/api/compliment/")
-        .then(res => {
-            const data = res.data;
-            alert(data);
-            console.log(data);
-    });
-};
 
+
+
+// 
 const getFortune = () => {
     axios.get("http://localhost:4000/api/fortune/")
         .then(res => {
@@ -24,6 +19,7 @@ const getFortune = () => {
     });
 }
 
+//
 const getDadJoke = async () => {
     try {
         const config = { headers: { Accept: 'application/json' }}
@@ -35,8 +31,7 @@ const getDadJoke = async () => {
     
 }
 
-// addComments*
-
+// Creating a new <li> and Appending it to the <ul> list: 
 const addNewJoke = async () => {
     const jokeText = await getDadJoke();
     console.log(jokeText)
