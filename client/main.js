@@ -9,8 +9,10 @@ const commentsList = document.getElementById('comments');
 
 
 // Handle form submission...
+
 function handleFormSubmission(event) {
     event.preventDefault();
+    // I also have this above ^
     const form = document.getElementById('lostFoundForm');
     const formData = new FormData(form);
     const method = form.getAttribute('method');
@@ -129,7 +131,6 @@ postForm.addEventListener('submit', function(event) {
     commentsInput.value = '';
 });
 
-form.addEventListener('submit', handleFormSubmission);
 fortuneBtn.addEventListener('click', getFortune);
 dadJokeButton.addEventListener('click', addNewJoke);
 
