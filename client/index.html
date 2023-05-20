@@ -19,7 +19,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <form class="d-flex" role="search">
+                    <form class="d-flex" role="search" action="found.html">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-primary" type="submit">Found Items</button>
                     
@@ -54,7 +54,7 @@
             </label>
         </div>
 
-        <form id="lostFoundForm">
+        <form id="lostFoundForm" action="found.html">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name" required>
@@ -74,16 +74,17 @@
         </form>
 
     </div>
-        
+    
+    <br>
     <hr>
     <div class="container flex justify-content-center">
         <h2>Leave Us a Comment</h2>
         <!-- Change this 'action' -->
-        <form action="/dogs" id="postForm">
-            <input type="text" name="username" placeholder="username">
-            <input type="text" name="comments" placeholder="comments">
-            <button type="post" class="btn btn-primary">POST</button>
-        </form>
+            <form action="found.html" id="postForm">
+                <input type="text" name="username" placeholder="username">
+                <input type="text" name="comments" placeholder="comments">
+                <button type="post" class="btn btn-primary">POST</button>               
+            </form>
 
         <h2>Comments:</h2>
             <ul id="comments">
@@ -91,21 +92,8 @@
             </ul>
     
     </div>
-    <br>
-    <hr>
-    <div class="container flex justify-content-center">
-        <h2>Don't feel Lost, These will cheer you up!</h2>
-        <!-- <button id="complimentButton">Get a Compliment</button> -->
-        <button id="fortuneButton">Get a Fortune</button>
-        <button id="dadJokeButton">Get a Dad Joke</button>
-            <ul id="jokes"></ul>
-        <div class="tetris"> 
-            <button>
-                <a href="./tetris.html">Play TETRIS</a>
-            </button>
-        </div> 
-    </div>
 
+    <br>
     <footer class="footer">
         <h5>© 2023 I found ___. All Rights Reserved *</h5>        
     </footer>
