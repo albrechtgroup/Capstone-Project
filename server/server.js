@@ -10,26 +10,28 @@ app.use(express.static(`${__dirname}/client`))
 
 const { getFortune } = require('./controller')
 
-// // Endpoint for handling form submissions
-// app.post('/submit', (req, res) => {
-//   const { name, description, contact } = req.body;
-//   // Handle form submission logic here
+// Endpoint for handling form submissions
+app.post('/submit', (req, res) => {
+  const { name, description, contact } = req.body;
+  // Handle form submission logic here
 
-//   res.sendStatus(200);
-// });
+  res.sendStatus(200);
+});
 
-// // Endpoint for handling PUT requests
-// app.put('/items/:id', (req, res) => {
-//   const itemId = req.params.id;
-//   const { name, description, contact } = req.body;
-//   // Handle PUT request logic here
-// });
+// Endpoint for handling PUT requests
+app.put('/items/:id', (req, res) => {
+  const itemId = req.params.id;
+  const { name, description, contact } = req.body;
+  // Handle PUT request logic here
 
-// // Endpoint for handling DELETE requests
-// app.delete('/items/:id', (req, res) => {
-//   const itemId = req.params.id;
-//   // Handle DELETE request logic here
-// });
+});
+
+// Endpoint for handling DELETE requests
+app.delete('/items/:id', (req, res) => {
+  const itemId = req.params.id;
+  // Handle DELETE request logic 
+  
+});
 
 
 
