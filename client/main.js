@@ -9,7 +9,6 @@ const commentsList = document.getElementById('comments');
 
 
 // Handle form submission...
-
 function handleFormSubmission(event) {
     event.preventDefault();
     // I also have this above ^
@@ -48,7 +47,7 @@ function handleFormSubmission(event) {
         .catch(error => {
             console.error('PUT request failed:', error);
     });
-    // Update User intp
+    // Update User info
     const newUserData = {
         name: 'Jonathan Doe-Ray',
         job: 'Software Architect'
@@ -109,7 +108,7 @@ const addNewJoke = async () => {
     jokes.append(newLI);
 }
 
-
+// Post Comments:
 postForm.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission and page reload
 
