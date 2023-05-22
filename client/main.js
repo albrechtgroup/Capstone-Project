@@ -8,11 +8,12 @@ const postForm = document.getElementById('postForm');
 const commentsList = document.getElementById('comments');
 
 
+
 // Handle form submission...
 function handleFormSubmission(event) {
     event.preventDefault();
     // I also have this above ^
-    const form = document.getElementById('lostFoundForm');
+    // const form = document.getElementById('lostFoundForm');
     const formData = new FormData(form);
     const method = form.getAttribute('method');
     const url = form.getAttribute('action');
@@ -21,6 +22,18 @@ function handleFormSubmission(event) {
     for (let [key, value] of formData) {
         data[key] = value;
     }
+
+    // POST  newUserData*
+    axios.post('https://reqres.in/api/users/2', newUserData)
+        .then(response => {
+        console.log('POST request succeeded:', response.data);
+    // Clear the input fields
+        form.reset();
+    })
+    .catch(error => {
+        console.error('POST request failed:', error);
+    });
+
 
     // Example using axios.get
     axios.get('https://reqres.in/api/users/2')
@@ -53,17 +66,6 @@ function handleFormSubmission(event) {
         job: 'Software Architect'
     };
 
-    // POST  newUserData*
-    axios.post('https://reqres.in/api/users/2', newUserData)
-        .then(response => {
-        console.log('POST request succeeded:', response.data);
-    // Clear the input fields
-        form.reset();
-    })
-    .catch(error => {
-        console.error('POST request failed:', error);
-    });
-
     // DELETE
     axios.delete('https://reqres.in/api/users/2')
         .then(response => {
@@ -87,7 +89,7 @@ const getFortune = () => {
     });
 }
 
-// axios.get from a Dad Joke Json file*
+// axios.get from a Dad Joke API*
 const getDadJoke = async () => {
     try {
         const config = { headers: { Accept: 'application/json' }}
@@ -130,6 +132,7 @@ postForm.addEventListener('submit', function(event) {
     commentsInput.value = '';
 });
 
+form.addEventListener('submit', handleFormSubmission);
 fortuneBtn.addEventListener('click', getFortune);
 dadJokeButton.addEventListener('click', addNewJoke);
 

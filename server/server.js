@@ -10,6 +10,7 @@ app.use(express.static(`${__dirname}/client`))
 
 const { getFortune } = require('./controller')
 
+
 // Endpoint for handling form submissions
 app.post('/submit', (req, res) => {
   const { name, description, contact } = req.body;
@@ -32,7 +33,6 @@ app.delete('/items/:id', (req, res) => {
   // Handle DELETE request logic 
   
 });
-
 
 
 // // Form submision
