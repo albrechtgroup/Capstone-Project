@@ -1,10 +1,7 @@
-console.log("Utils.js");
-const fortuneBtn = document.querySelector("#fortuneButton");
-const dadJokeButton = document.querySelector('#dadJokeButton');
-const jokes = document.querySelector('#jokes');
+let baseURL = 'http://localhost:4000';
 
 
-// This is being exported from controller.js
+// Exported from controller.js
 const getFortune = () => {
     axios.get("http://localhost:4000/api/fortune/")
         .then(res => {
@@ -26,7 +23,7 @@ const getDadJoke = async () => {
     
 }
 
-// Creating a new <li> and Appending it to the <ul> list: 
+// Creating a new <li> and Append to the <ul> list: 
 const addNewJoke = async () => {
     const jokeText = await getDadJoke();
     console.log(jokeText)
@@ -34,9 +31,3 @@ const addNewJoke = async () => {
     newLI.append(jokeText);
     jokes.append(newLI);
 }
-
-// .get from controller.js
-app.get("/api/fortune", getFortune);
-
-fortuneBtn.addEventListener('click', getFortune);
-dadJokeButton.addEventListener('click', addNewJoke);
