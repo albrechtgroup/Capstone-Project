@@ -4,6 +4,23 @@ const axios = require('axios');
 
 const app = express();
 
+// found objects
+let foundItems = [
+    {
+      name: "Leslie Jenkins",
+      description: "Baseball Glove",
+      contactInfo: "6465572390"
+
+    },
+    {
+      name: "Mark Rugard",
+      description: "Kids scooter",
+      contactInfo: "3475544072"
+
+    }     
+   
+];
+
 app.use(cors());
 app.use(express.json());
 app.use(express.static(`${__dirname}/client`))
@@ -12,37 +29,33 @@ const { getFortune } = require('./controller')
 
 
 // Endpoint for handling form submissions
-app.post('/submit', (req, res) => {
+app.post('/lost', (req, res) => {
   const { name, description, contact } = req.body;
-  // Handle form submission logic here
+  // Handle form submission
+
+
 
   res.sendStatus(200);
 });
 
 // Endpoint for handling PUT requests
-app.put('/items/:id', (req, res) => {
+app.get('/lost/', (req, res) => {
   const itemId = req.params.id;
   const { name, description, contact } = req.body;
-  // Handle PUT request logic here
+  // 
 
 });
 
-// Endpoint for handling DELETE requests
-app.delete('/items/:id', (req, res) => {
-  const itemId = req.params.id;
-  // Handle DELETE request logic 
-  
-});
+
+
 
 
 // // Form submision
 // app.post(`/api/users/2`, handleFormSubmission);
-// app.post(`/api/users/2`, handleFormSubmission);
-// app.put(`/api/users/2`, handleFormSubmission);
-// app.delete(`/api/users/2`, handleFormSubmission);
+// app.get(`/api/users/2`, handleFormSubmission);
 
-// .get from controller.js
-app.get("/api/fortune", getFortune);
+
+
 
 
 
