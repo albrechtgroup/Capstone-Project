@@ -30,14 +30,14 @@ const handleForm = (event) => {
             alert(err.message)
         })
 
-    // GET
-    axios.get(`${baseURL}/api/items/${itemStatus}`, formData)
-        .then(res => {
-            console.log(res.data)
-        })
-        .catch(err => {
-            alert(err.message)
-        })
+    // // GET
+    // axios.get(`${baseURL}/api/items/${itemStatus}`, formData)
+    //     .then(res => {
+    //         console.log(res.data)
+    //     })
+    //     .catch(err => {
+    //         alert(err.message)
+    //     })
 
 
     // Create a new <li> element

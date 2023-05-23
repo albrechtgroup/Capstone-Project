@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(`${__dirname}/client`))
 
-const { getFortune } = require('./controller')
+// const { getFortune } = require('./controller')
 
 
 // found objects
@@ -49,43 +49,17 @@ app.post('/api/items/:status',(req,res) => {
        name, description, contactInfo, status, id
     }
     items.push(newObj)  
+    // console.log(items)
     res.status(200).send(items)
 });
 
 
 
 
-// // Send the form data using axios POST request
-// axios.post('/api/foundItems', formData)
-//     .then(response => {
-//         // Handle the response if needed
-//         console.log(response.data);
-//         // Redirect to the found.html page
-//         window.location.href = 'found.html';
-//     })
-//     .catch(error => {
-//         // Handle the error if needed
-//         console.error(error);
-//     });
- 
-// // GET
-// axios.get('/api/foundItems', formData)
-//     .then(response => {
-//         // Handle the response if needed
-//         console.log(response.data);
-//         // Redirect to the found.html page
-//         window.location.href = 'found.html';
-//     })
-//     .catch(error => {
-//         // Handle the error if needed
-//         console.error(error);
-//     });
- 
-
 
 // // Form submision
-// app.post(`/api/foundItems`, handleFormSubmission);
-// app.get(`/api/foundItems`, handleFormSubmission);
+// app.post(`/api/foundItems`, handleForm);
+// app.get(`/api/foundItems`, handleForm);
 
 
 app.listen(4000, () => console.log("===> Server Running on 4000 <==="));

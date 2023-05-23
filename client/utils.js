@@ -1,9 +1,11 @@
 let baseURL = 'http://localhost:4000';
 
+console.log('utils.js');
+
 
 // Exported from controller.js
 const getFortune = () => {
-    axios.get("http://localhost:4000/api/fortune/")
+    axios.get(`${baseURL}/api/fortune/`)
         .then(res => {
             const data = res.data;
             alert(data);
