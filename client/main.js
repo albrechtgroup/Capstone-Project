@@ -9,7 +9,6 @@ const cardItem = document.querySelector('card-body');
 // Handle the form POST
 const handleForm = (event) => {
     event.preventDefault(); 
-
     // Retrieve the values from the input fields
     const nameInput = form.elements.name;
     const descriptionInput = form.elements.description;
@@ -26,8 +25,7 @@ const handleForm = (event) => {
     axios.post(`${baseURL}/api/items/${itemStatus}`, formData)
         .then(res => {
             console.log(res.data)
-            
-           
+                       
         })
         .catch(err => {
             alert(err.message)

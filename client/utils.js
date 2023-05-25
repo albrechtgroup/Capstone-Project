@@ -1,7 +1,7 @@
 let baseURL = 'http://localhost:4000';
 const foundItem = document.getElementById('foundItems');
 
-
+// Creat Item card display
 const createCardItem  = (arr) => {
     // .map
     arr.map(item => {
@@ -27,8 +27,7 @@ const createCardItem  = (arr) => {
        
 };
 
-
-//
+// Get all of the listed items
 const getAllItems = () => {
     console.log("getAllItems invoked*")
 
@@ -44,7 +43,6 @@ const getAllItems = () => {
 
 };
  
-
 // Exported from controller.js
 const getFortune = () => {
     axios.get("http://localhost:4000/api/fortune/")
