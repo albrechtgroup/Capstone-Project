@@ -1,7 +1,7 @@
 let baseURL = 'http://localhost:4000';
+const foundItem = document.getElementById('foundItems');
 
 
-//
 const createCardItem  = (arr) => {
     // .map
     arr.map(item => {
@@ -11,15 +11,18 @@ const createCardItem  = (arr) => {
         itemCard.innerHTML = `
           
         <div class="card-body">
-            <h5 class="card-title">${item.name} - ${item.id}</h5>
+            <h5 clas="card-title">${item.name} - ${item.id}</h5>
                 <p class="card-text">${item.description}</p>
                 <p class="card-text">${item.contactInfo}</p>
             <h5 class="card-title">${item.status}</h5>
-            <a href="found.html" class="btn btn-primary">Submit</a>
-        </div> 
+            <a href="found.html" class="btn btn-primary">View Item</a>
+        </div>
+        <br> 
 
         `;
-        document.body.appendChild(itemCard); // Append the created element to the body or any other desired parent element
+        
+        console.log(itemCard)
+        foundItem.appendChild(itemCard)
     });  
        
 };
@@ -29,12 +32,11 @@ const createCardItem  = (arr) => {
 const getAllItems = () => {
     console.log("getAllItems invoked*")
 
-
     axios.get(`${baseURL}/api/items`)
     .then(res => {
         console.log(res.data)
         // call function passing res.data
-        
+        createCardItem(res.data);
     })
     .catch(err => {
         console.log(err)

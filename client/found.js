@@ -6,6 +6,7 @@ const jokes = document.querySelector('#jokes');
 getAllItems();
 
 
+
 // cardItem.addEventListener('submit', createCardItem);
 fortuneBtn.addEventListener('click', getFortune);
 dadJokeButton.addEventListener('click', addNewJoke);
