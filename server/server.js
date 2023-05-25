@@ -35,7 +35,7 @@ let items = [
     }        
 ];
 
-// 
+// module export from controller.js
 const { getFortune } =  require('./controller.js');
 
 let id = 4;
@@ -44,6 +44,8 @@ let id = 4;
 app.post('/api/items/:status',(req,res) => {
     const { name, description, contactInfo } = req.body
     const { status } = req.params;
+    
+    console.log(req.body)
     // 
     const newObj = {
        name, description, contactInfo, status, id
