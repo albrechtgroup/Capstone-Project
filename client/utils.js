@@ -1,17 +1,57 @@
 let baseURL = 'http://localhost:4000';
 
-console.log('utils.js');
 
+//
+const createCardItem  = (arr) => {
+    // .map
+    arr.map(item => {
+        const itemCard = document.createElement('div');
+        itemCard.classList.add('card')
+        console.log('CreateCardItem!')
+        itemCard.innerHTML = `
+          
+        <div class="card-body">
+            <h5 class="card-title">${item.name} - ${item.id}</h5>
+                <p class="card-text">${item.description}</p>
+                <p class="card-text">${item.contactInfo}</p>
+            <h5 class="card-title">${item.status}</h5>
+            <a href="found.html" class="btn btn-primary">Submit</a>
+        </div> 
+
+        `;
+        document.body.appendChild(itemCard); // Append the created element to the body or any other desired parent element
+    });  
+       
+};
+
+
+//
+const getAllItems = () => {
+    console.log("getAllItems invoked*")
+
+
+    axios.get(`${baseURL}/api/items`)
+    .then(res => {
+        console.log(res.data)
+        // call function passing res.data
+        
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
+};
+ 
 
 // Exported from controller.js
 const getFortune = () => {
-    axios.get(`${baseURL}/api/fortune/`)
+    axios.get("http://localhost:4000/api/fortune/")
         .then(res => {
             const data = res.data;
             alert(data);
             console.log(data);
     });
-}
+};
 
 // axios.get from a Dad Joke API*
 const getDadJoke = async () => {
@@ -23,7 +63,7 @@ const getDadJoke = async () => {
         return "Sorry, No jokes available."
     }
     
-}
+};
 
 // Creating a new <li> and Append to the <ul> list: 
 const addNewJoke = async () => {

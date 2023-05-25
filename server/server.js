@@ -8,8 +8,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(`${__dirname}/client`))
 
-// const { getFortune } = require('./controller')
-
 
 // found objects
 let items = [
@@ -37,6 +35,8 @@ let items = [
     }        
 ];
 
+// 
+const { getFortune } =  require('./controller.js');
 
 let id = 4;
 
@@ -53,13 +53,12 @@ app.post('/api/items/:status',(req,res) => {
     res.status(200).send(items)
 });
 
+// GET 
+app.get('/api/items', (req, res) => {
+  res.status(200).send(items)
+})
 
-
-
-
-// // Form submision
-// app.post(`/api/foundItems`, handleForm);
-// app.get(`/api/foundItems`, handleForm);
-
+// 
+app.get('/api/fortune', getFortune);
 
 app.listen(4000, () => console.log("===> Server Running on 4000 <==="));

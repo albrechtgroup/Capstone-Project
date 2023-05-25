@@ -22,10 +22,7 @@
                     <form class="d-flex" role="search" action="found.html">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-primary" type="submit">Found Items</button>
-                    </form>
-                    <!-- <li class="found-item">
-                        <a class="nav-link active" aria-current="page" href="#">Submit Found</a>
-                    </li> -->
+                    </form>                    
                 </ul>
                 <button class="btn btn-outline-primary">Login/Sign-Up</button>
             </div>
@@ -47,7 +44,7 @@
             </label>
         </div>
         
-        <form method="post" id="lostFoundForm" action="found.html">
+        <form method="post" id="lostFoundForm">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name" required>
@@ -72,7 +69,6 @@
     <hr>
     <div class="container flex justify-content-center">
         <h2>Leave Us a Comment</h2>
-        <!-- Change this 'action' -->
             <form action="found.html" id="postForm">
                 <input type="text" name="username" placeholder="username">
                 <input type="text" name="comments" placeholder="comments">

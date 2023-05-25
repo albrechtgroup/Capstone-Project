@@ -1,5 +1,3 @@
-alert("TETRIS is played using the ==> UP, DOWN, LEFT and RIGHT arrows.*");
-
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid')
     let squares = Array.from(document.querySelectorAll('.grid div'))

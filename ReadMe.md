@@ -12,6 +12,6 @@ https://reqres.in/
 2. Users can also submit a lost item as their own.
 3. Users can view all found and lost items on the   
  found items link. found.html
-4. 
+4. At the bottom of the page, users can choose from either hearing a random Dad joke, or play the game of Tetris.
 5. 
 

@@ -1,9 +1,9 @@
-
 const form = document.getElementById('lostFoundForm');
 const submitButton = document.querySelector(".btn.btn-primary");
 const postForm = document.getElementById('postForm');
 const commentsList = document.getElementById('comments');
 const itemStatus = document.querySelector('input[name="flexRadioDefault"]:checked').value;
+const cardItem = document.querySelector('card-body');
 
 // Handle the form POST
 const handleForm = (event) => {
@@ -29,24 +29,7 @@ const handleForm = (event) => {
         .catch(err => {
             alert(err.message)
         })
-
-    // // GET
-    // axios.get(`${baseURL}/api/items/${itemStatus}`, formData)
-    //     .then(res => {
-    //         console.log(res.data)
-    //     })
-    //     .catch(err => {
-    //         alert(err.message)
-    //     })
-
-
-    // Create a new <li> element
-    // const newComment = document.createElement('li');
-    // newComment.textContent = `${name}: ${description} ${contactInfo}`;
-
-    // // Append the new <li> to the <ul>
-    // commentsList.appendChild(foundItems);
-
+    
     // Clear the input fields
     nameInput.value = '';
     descriptionInput.value = '';
@@ -55,9 +38,6 @@ const handleForm = (event) => {
 };
 
 
-
-
-////////////// WORKS ///////////////////////////////////
 // Post Comments:
 postForm.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission and page reload
@@ -81,4 +61,5 @@ postForm.addEventListener('submit', function(event) {
 });
 
 form.addEventListener('submit', handleForm);
+
 
